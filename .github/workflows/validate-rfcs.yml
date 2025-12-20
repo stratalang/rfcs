@@ -1,0 +1,34 @@
+name: Validate RFCs
+
+on:
+  pull_request:
+    paths:
+      - '*.md'
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate RFC format
+        run: |
+          for file in language-features/*.md; do
+            if [ -f "$file" ]; then
+              if ! grep -q "^\*\*Status:\*\*" "$file"; then
+                echo "Error: $file missing Status field"
+                exit 1
+              fi
+              if ! grep -q "^\*\*Author:\*\*" "$file"; then
+                echo "Error: $file missing Author field"
+                exit 1
+              fi
+              if ! grep -q "^\*\*Created:\*\*" "$file"; then
+                echo "Error: $file missing Created field"
+                exit 1
+              fi
+            fi
+          done
+          echo "All RFCs validated successfully"
