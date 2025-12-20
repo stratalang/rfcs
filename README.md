@@ -38,6 +38,12 @@ When proposing new language features:
 4. Provide examples and use cases
 5. Document alternatives considered
 
+## RFC Index
+
+### Object-Oriented Programming
+
+- **[RFC 0001: Constructors and Destructors](./language-features/0001-constructors-destructors.md)** - Explicit constructors and destructors for classes
+
 ## RFC Format
 
 Each RFC should include:
