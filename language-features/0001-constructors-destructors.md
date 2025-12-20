@@ -1,7 +1,9 @@
 # RFC 0001: Constructors and Destructors
 
 **Status:** Proposed
+
 **Author:** Donald Pakkies
+
 **Created:** 20/12/2025
 
 ## Summary
