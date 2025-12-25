@@ -33,7 +33,7 @@ Each RFC includes a status field:
 When proposing new language features:
 
 1. Create a new RFC following the template
-2. Use the next available RFC number (currently 0002)
+2. Use the next available RFC number (currently 0003)
 3. Include all required sections
 4. Provide examples and use cases
 5. Document alternatives considered
@@ -43,6 +43,10 @@ When proposing new language features:
 ### Object-Oriented Programming
 
 - **[RFC 0001: Constructors and Destructors](./language-features/0001-constructors-destructors.md)** - Explicit constructors and destructors for classes
+
+### Metadata and Reflection
+
+- **[RFC 0002: Attributes](./language-features/0002-attributes.md)** - Declarative metadata annotation system for classes, methods, and properties
 
 ## RFC Format
 
